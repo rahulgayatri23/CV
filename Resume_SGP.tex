@@ -1,0 +1,207 @@
+	% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res} 
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+}
+% the margin option causes section titles to appear to the left of body text 
+\textwidth=5.2in % increase textwidth to get smaller right margin
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\begin{document} 
+ 
+\name{NAME\\ [12pt]} % the \\[12pt] adds a blank line after name
+ 
+\address{
+ Skype\ :\ rahulkumar.gayatri\\
+ email\ :\ rahulgayatri84@gmail.com\\
+ phone-number\ :\ +91-7899423040
+ }
+%\address{{\bf Permanent Address} \\ Flat No: 601, Dream Home Palace, Green Hills Colony road no. 1\\ Kothapet, hyd 500035, Telangana, India}
+
+ 
+\begin{resume} 
+%
+  \section{Summary}
+  \begin{itemize}
+%
+	   \item  Experience in sequential and parallel algorithm development.
+			 \begin{enumerate}
+				    \item Designed and implemented a Breadth First Search (BFS) algorithm that takes advantage of low memory on IBM's Cell B/E. processor.
+				    \item Parallelized Graph500 benchmarks, SPECFEM3D, linear iterative solvers on an SMP machine using the StarSs programming model.
+			\end{enumerate}
+%
+	   \item Experience in the areas of compiler and runtime development for parallel programming models.
+			 \begin{enumerate}
+				    \item Introduced new compiler directives and the necessary runtime support in the StarSs framework to handle synchronization of multiple threads.
+			 \end{enumerate}
+%
+	   \item Knowledge in the area of Transactional Memory framework.
+			 \begin{enumerate}
+				    \item Worked extensively with the Software Transactiona Memory (STM).
+			 \end{enumerate}
+%
+	   \item Experience in parallelizing applications using Pthreads, OpenMP, OMPSs and MPI programming models.
+	   \item Familiar with exploiting the underlying processor arhitecture to enchance the application performance.
+	   \item Experience in collaborating with other researchers and engineers across organizations to achieve the set goals.
+	   \item Familiarity with tools like valgrind profiler, gdb, google performance tools, latex software and version control tools such as git.
+%
+	   \item Currently working Moose, a simulation model of neural connections in human brain.
+			 \begin{enumerate}
+				    \item It is a multiscale problem which provides an opportunity for both distributed and thread-based parallelism.
+			 \end{enumerate}
+%	   
+	   \item Basic knowledge of GPU, Cuda Programming and Intel Xeon Phi. 
+%
+  \end{itemize}
+
+\section{Education} 
+%
+\begin{enumerate}
+	   \item {\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
+		Barcelona Supercomputing Center \\
+		Thesis Title - \enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}\\
+%
+	   \item {\bf Master of Technology }(2009) \\
+		Specialization in Computer Science, Sri Sathya Sai University (SSSU) \\
+%
+	   \item {\bf Master of Science }(2007) \\
+		Specialization in Computer Science, SSSU
+%
+	   \item {\bf Bachelor of Science} (2005) \\
+		Specialization in Mathematics, SSSU 
+%
+\end{enumerate}
+%
+\section{Publications}
+%Enumerating papers so as to reference later in projects. 
+%
+\begin{enumerate}
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Loop level speculation in a task based programming model.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Transactional access to shared memory in StarSs, a task based programming model.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade} 
+			 \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} \\
+%
+	   \item \textit{Roberto Giorgi et al.}
+			 \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} \\
+%	   
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade} 
+			 \enquote{Presented a Poster on the benefits of using CellSs ( a programming model for Cell Processor) in the ACACES 2010 summer school of HiPEAC.}
+%	   
+	   \item \textit{Rahulkumar Gayatri,Pallav Baruah} \enquote{Parallelizing Breadth First Search Using Cell BE, HiPC, Student Symposium, 2008}
+%
+\end {enumerate}
+%
+\section{Projects} 
+* - current project \\
+%
+\begin{enumerate}
+%
+	   \item {\bf Parallelization of Moose, a Multiscale Object-Oriented Simulation Environment*}
+			 \begin{enumerate}
+				    \item It is a simulation environment for Neural Systems. It operates from the level of stochastic chemical computation to multicompartment single-neuron model.
+				    \item The framework uses numerical solvers that solve the chemical and electrical reactions between cells at every time-step.
+				    \item A cell is divided into multiple compartments for simplicity and the solvers are used on each of the compartments. This provides scope for parallelization, where the computation on different compartments can be parallely executed on different threads.
+				    \item At present, I am working on exploiting this parallelism in a thread-based environment. 
+				    \item The focus is on pthread and OpenMP based implementations to compare the results and choose the best programming model for the framework. 
+			 \end{enumerate}
+%
+	   \item {\bf Doctoral Thesis} - 
+			 \begin{enumerate}
+				    \item Focussed in the area of parallel programming models.
+				    \item Provides compiler and runtime support for thread synchronization in StarSs, a task-based programming model.
+				    \item The work explains and proves the advantage of speculative thread synchronization methods over the traditional locks and barriers based synchronization.
+				    \item Software Transactional Memory (STM) was used to achieve the speculative behavior.
+				    \item Integrated the TinySTM (lighweight STM library), into the StarSs framework.
+				    \item Introduced compiler extensions that the programmers can use to notify the framework of a critical memory update.
+				    \item Implemented the corresponding runtime support for the above feature which maintains application correctness and consistency. 
+				    \item Extended the above idea to speculatively create and schedule tasks in the StarSs framework.
+				    \item Implemented the said feature (compiler and associated runtime support) that allows tasks to be optimistically scheduled ahead in time.
+				    \item The results of such tasks are committed only after their validity in the execution flow can be guaranteed.
+				    \item Ported benchmarks and scientific applications on multi-cores using the StarSs framework, where the above mentioned features were used for performance improvement.
+				    \item Papers published in this project: [1],[2] and [3].
+	  		\end{enumerate}
+%
+	   \item {\bf StarSs} - 
+			 \begin{enumerate}
+				    \item A task-based programming model to make parallel programming easier.
+				    \item The framework comprises of compiler directives and the associated runtime support.
+				    \item My contribution to the programming model was to maintain the runtime framework and resolve conflicts when new directives and their required implementation was introduced. 
+				    \item My focus was on SMPSs (SMP Super Scalar), the StarSs implementation for Symmetric Multiprocessors (SMPs).
+				    \item I also worked on design and implementation of parallel applications using the framework for the StarSs application repository.
+			 \end{enumerate}
+%
+	   \item {\bf Teraflux} - 
+			 \begin{enumerate}
+				    \item It was a project supported and funded by the European Union.
+				    The focus of the project was to exploit dataflow parallelism in a Teracomputing device. 
+				    \item It proposes a set of programming model, compiler analysis and a scalable reliable architecture to harness large scale parallelism in an efficient way.
+				    \item The project was a collaboration of leading research centers and industries in the European Union. My participation in the project was through Barcelona Supercomputing Center.
+				    \item My contribution to the project was in the area of programming models. 
+				    \item I contributed to the mechanisms that handle concurrent memory access to shared memory.
+				    \item An STM-based concurrency control mechanism was implemented to handle critical memory updates.
+				    \item Papers published in this project: paper [4].
+			\end{enumerate}
+	     	
+%
+	   \item {\bf MTech Thesis} -
+			 \begin{enumerate}
+				    \item Designed and implemented an efficient Breadth First Search (BFS) algorithm on IBM's Cell.B.E architecture.
+				    \item The implementation exploited memory locality to maximize the use of limited storage capacity of the architectures SPE's (slave processors). 
+				    \item Poster[5] presented the results achieved in this project.
+			 \end{enumerate}
+	\end{enumerate}
+%
+	\section{Professional Career}
+%
+	\begin{enumerate}
+		   \item Doctoral student at Barcelona Supercomputing Center \\ 
+				 September, 2009 - March 2015
+		   \item Technical Specialist, HPC, Wipro Infotech \\
+				 September 2015 - Present day
+	\end{enumerate}
+%
+	\section{Honors} 
+	Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+	
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+	
+	\section{Programming Languages and Models}
+	   \begin{tabular}{l p{3in}}
+		\underline{Languages:} & C\smallskip ,C++ \smallskip, python(basic)\smallskip \\
+		\underline{Scripting:} & Shell\smallskip, LaTeX\smallskip , Sed\smallskip, awk\smallskip, gnuplot\\
+		\underline{Programming Models:} & StarSs\smallskip, OpenMP\smallskip, Pthreads\smallskip, MPI\smallskip, STM\\
+		\underline{Operating Systems:}  & Microsoft Windows\smallskip , Linux\\
+	    \underline{Software:} & Eclipse, Visual Studio 2010\smallskip, GIT\smallskip\\
+	    \underline{Profiling Tools:} &gdb, Valgrind\smallskip, google-performance tools\smallskip \\ 
+	 \end{tabular}
+%
+% 
+	\section{References}
+	\begin{enumerate}
+		   \item {\it Rosa Maria Badia}, Project and group manager at Barcelona Supercomputing Center.\\ 
+				 Relation: PhD supervisor, email: \href{}{rosa.m.badia@bsc.es},\\
+				 Web-page: \url{http://personals.ac.upc.es/rosab/}
+		   \item \it {Eduard Ayguadè}, Computer Sciences Department Associate Director at Barcelona Supercomputing Center.\\ 
+				 Relation PhD supervisor, email: \href{}{eduard.ayguade@bsc.es},\\
+				 Web-page: \url{http://people.ac.upc.es/eduard/}
+		   \item \it {Pieter Bellens}, Modelling engineer at ArcelorMittal, Ghent, Belgium\\
+				 Relation: Colleague at Barcelona Supercomputing Center, email: \href{}{pbellens@gmail.com}
+	
+	\end{enumerate}
+\end{resume} 
+%
+\end{document} 
+
+

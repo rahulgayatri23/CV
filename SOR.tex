@@ -1,0 +1,85 @@
+\documentclass{article}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{fontspec}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\Hrule}{\rule{\linewidth}{0.3mm}}
+
+\makeatletter% since there's an at-sign (@) in the command name
+\renewcommand{\@maketitle}{%
+\parindent=0pt% don't indent paragraphs in the title block
+\centering
+{\Large \bfseries\textsc{\@title}}
+\HRule\par%
+\textit{\@author \hfill \@date}
+\par
+}
+\makeatother% resets the meaning of the at-sign (@)
+
+\title{Statement of Research}
+
+\author{Rahulkumar Gayatri}
+\date{\today}
+\begin{document}
+\maketitle% prints the title block
+\mbox{}\newline
+Multi-core processors are a norm today. Most of the new generation computing systems in the market are at-least a quadcore with hyperthreading. 
+And this trend is on a rise with 8 and 16 core processors already into the commercial market.
+But in-order to completely utilize the computing power of these machines, parallel applications and softwares should be developed, that they can completely utilize all the cores.
+This implies we need compilers and runtime environents that make parallel programming easier. 
+
+%
+\section{Past Research}
+%
+\par
+My Doctoral thesis was done at Barcelona SuperComputing Center (BSC).
+It focussed on using STM to synchronize multiple threads in StarSs, a task-based programming Model.
+Synchronization of threads in a shared memory muti-core processor is necessary during the critical memory updates and to maintain sequential consistency of the parallel code.
+Speculative synchronization using Software Transactional Memory (STM) based approach was adopted instead of the traditional locks, mutexes and barriers to achieve concurrency control. 
+%
+\par
+The first part of my thesis concentrated on integrating a Software Transactional Memory (STM) library into the StarSs framework.
+After that, I extended the StarSs framework with compiler directives and the associated runtime support for STM-based concurrency control among multiple threads.
+We ported applications such as NQueens and Specfem which update critical memory onto StarSs.
+A performance comparison between lock-based synchronization and STM-based concurrency control were performed.
+The results showed an increase in performance of applications wherein, the contention for locks were higher.
+Also the Optimistic nature of STM can exploit higher degrees of parallelism from an application. 
+%
+\par
+In the second part of my thesis, we extended the speculative memory updates to speculative execution of tasks.
+I extended the StarSs framework such that tasks can be scheduled before their presence in the execution flow can be confirmed.
+The framework was extended with compiler directives that a programmer can use to annotate code blocks, where speculative task execution can improve performance.
+Runtime support was added so that the speculatively generated tasks can be executed as transactions whose updates are rolled back in case the speculation fails.
+To avoid the overhead associated with an STM-framework, such as conflict detection and concurrency control, I implemented a lighweight rollback mechanism which can be used to undo the updates of tasks. 
+The idea of speculative task execution, wherein the tasks are scheduled even before their validity can be ascertained has given an average of 20\% performance benefits. 
+This is a highly positive result, since the performance improvement was achieved on an already parallelized code. 
+%
+\par
+Additionally at BSC, I also worked on porting applications using SMPSs, StarSs implementation for SMPs onto Symmetric Multiprocessors (SMPs).
+I built applications that show the performance benefits, ease of use and portability of using the StarSs framework. 
+The applications are a part of th StarSs application repository. 
+My background in mathematics helps me develop novel ideas for parallelization of algorithms and efficient ways to implement them. 
+In my Mtech thesis, I designed and implemented a Breadth First Search algorithm, that optimises the use of low memory available in the Synergistic Processing Ellement(SPE) of IBM's Cell.B.E processor. 
+The strong point of the implementation was the design of a data structure to represent node. This data structure helped in increasing memory locality. 
+
+\section {Current Research}
+After my graduation, I have continued my work in the field of HPC.
+My current work involves, parallelization of \textit{MOOSE}, a software that simulates the behavior of neurons in a human brain.
+The cells in a human body interact via electrical and chemical exchanges between them. 
+\textit{Moose} simulates this interactions using linear solvers such as kinetic solver.
+The multi-scale characteristic of this project allows us to exploit both shared and distributed memory parallelism. 
+Interactions between different cells can performed on different nodes. 
+Each cell is divided into subcells and each of them are processed parallely by the multiple cores available on each node.
+I have successfully implemented the shared-memory parallelism using OpenMP and Pthreads on the Kinetic solver. 
+With this we achieved a speedup of 4.5X with 8 threads.
+Currently I am focussed on using MPI to parallelize the processing of various cells. 
+The implementation is being done on the 64-node infiniband cluster available with the client.
+
+%
+\section{Future Research}
+My future work will primarily focus on development of parallel programming models and using the models to parallelize scientific applications.
+
+
+
+\end{document}

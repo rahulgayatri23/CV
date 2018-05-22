@@ -1,0 +1,160 @@
+	% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res} 
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+}
+% the margin option causes section titles to appear to the left of body text 
+\textwidth=5.2in % increase textwidth to get smaller right margin
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\begin{document} 
+ 
+\name{NAME\\ [12pt]} % the \\[12pt] adds a blank line after name
+ 
+\address{
+%{\bf Present Address} \\ Carrer Consell de cent, 391,4,2 \\ Barcelona, Spain, 08009.  \\
+ Skype\ :\ rahulkumar.gayatri\\
+ email\ :\ rahulgayatri84@gmail.com\\
+% phone-number\ :\ +34-6996901960
+ }
+%\address{{\bf Permanent Address} \\ Flat No: 601, Dream Home Palace, Green Hills Colony road no. 1\\ Kothapet, hyd 500035, Telangana, India}
+
+ 
+\begin{resume} 
+%
+\section{Research Interest}
+\mbox{} \newline
+To work in the area of developing efficient algorithms that make the optimum use of the available resources. 
+To work on performance optimizations of benchmarks (tracing applications for performance bottlenecks and overcome them with elegant solutions). 
+To work on challenging projects and be a part of the latest trending developments in the world of technology. 
+%
+\section{Summary}
+\begin{itemize}
+	   \item - Working in the area of HPC since 2007.
+\end{itemize}
+				 
+
+%
+\section{Education} 
+%\mbox{} \newline
+{\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
+Barcelona Supercomputing Center \\
+Thesis Title - \enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}\\
+Web-page - \url{http://www.bsc.es/}\\\\
+%
+{\bf Master of Technology }(2009) \\
+Specialization in Computer Science. \\
+Sri Sathya Sai University \\
+Web-page - \url{http://sssihl.edu.in/sssuniversity/Academics/DepartmentofMathematicsComputerScience/Overview.aspx}\\\\
+%
+{\bf Master of Science }(2007) \\
+Specialization in Computer Science. \\
+Sri Sathya Sai University \\\\
+%
+{\bf Bachelor of Science} (2005) \\
+Specialization in Mathematics. \\
+Sri Sathya Sai University \\\\
+%
+%
+\section{Publications}
+%Enumerating papers so as to reference later in projects. 
+%
+1] \enquote{Loop level speculation in a task based programming model.} \\
+        \url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6799132&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fxpls\%2Fabs\_all.jsp\%3Farnumber\%3D6799132}\\
+%
+2] \enquote{Transactional access to shared memory in StarSs, a task based programming model.} \\
+        \url{http://link.springer.com/chapter/10.1007/978-3-642-32820-6\_51#page-1} \\
+%
+3] \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} \\
+        \url{http://research.ac.upc.edu/multiprog/papers/multiprog-2015-3.pdf} \\
+%
+4] \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} \\
+        \url{http://www.sciencedirect.com/science/article/pii/S0141933114000490} \\
+%
+%Publications without links
+%\section{Publications}
+%%Enumerating papers so as to reference later in projects. 
+%%
+%1] \enquote{Loop level speculation in a task based programming model.} High Performance Computing (HiPC), 2013 20th International Conference on. IEEE, 2013.\\
+%        authors - \name{}{Rahulkumar Gayatri, Rosa M.Badia, Eduard Ayguade, et.al}\\\\
+%%
+%2] \enquote{Transactional access to shared memory in StarSs, a task based programming model.} Euro-Par 2012 Parallel Processing. Springer Berlin Heidelberg.\\
+%        authors - \name{}{Rahulkumar Gayatri, Rosa M.Badia and Eduard Ayguade}\\\\
+%%
+%3] \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} Programmability Issues for Heterogeneous Multicores (MULTIPROG-2015). \\
+%        authors - \name{}{Rahulkumar Gayatri, Rosa M.Badia and Eduard Ayguade}\\\\
+%%
+%4] \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} Microprocessors and Microsystems (2014). \\\\
+%
+%
+\section{Projects} 
+{\bf Doctoral Thesis} \\
+%A detailed analysis of speculation based optimistic techniques for synchronization of multiple threads in parallel programing. 
+Research  the idea of integrating Transactional Memory into a Parallel Programming Model and use the framework to synchronize the multiple threads of execution. 
+This optimistic approach has been adopted to improve the performance and the efficiency of a parallel application.\\ 
+Papers published in this project: papers [1],[2] and [3] .\\\\
+%
+{\bf StarSs}\\
+A task-based programming model to make parallel programming easier. It generates a task-dependency graph at runtime based on the data-flow principles. 
+My contribution to the thesis was to introduce new directives to the compiler and provide the required runtime support for the synchronization of multiple threads. \\\\
+%
+{\bf Teraflux}  \\
+Teraflux project proposes a set of programming model, compiler analysis and a scalable, reliable architecture that will be able to harness such large scale parallelism in an efficient way.
+My contribution to the project was to introduce STM-based concurrency to handle simultaneous access to shared memory.\\
+Papers published in this project: paper [4].\\\\
+%
+{\bf MTech Thesis} \\
+An efficient Breadth First Search (BFS) implementation that exploits memory locality in the IBM's Cell.B.E architecture. \\ 
+A poster presenting this work was published in the student research symposium of HiPC 2008, Banglore, India.
+%\newline\newline
+%
+\section{Professional Career}
+%
+%\mbox{} \newline
+Doctoral student at Barcelona Supercomputing Center - \\ 
+September, 2009 - Present day
+%
+\section{Honors} 
+Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+\section{Programming Languages and Models}
+   \begin{tabular}{l p{3in}}
+    \underline{Languages:} & C\smallskip ,C++ \smallskip \\
+	\underline{Scripting:} & Shell\smallskip, LaTeX\smallskip , Sed\smallskip, awk\smallskip, gnuplot\\
+	\underline{Programming Models:} & StarSs\smallskip, OpenMP\smallskip , MPI\smallskip, Software Transactional Memory (STM)\\\\
+%	\underline{Office:} & Microsoft Office\smallskip, LibreOffice\\
+	\underline{Operating Systems:}  & Microsoft Windows\smallskip , Linux\\
+    \underline{Software:} & Eclipse, Visual Studio 2010\smallskip, GIT\smallskip\\
+    \underline{Profiling Tools:} &gdb, Valgrind\smallskip \\ 
+ \end{tabular}
+%
+\section{Languages}
+English, Hindi, Spanish.
+%Telugu, Marathi. 
+\section{References}
+%
+{\it Rosa Maria Badia}, Project and group manager at Barcelona Supercomputing Center.\\ 
+Relation: PhD supervisor, email: \href{}{rosa.m.badia@bsc.es},\\
+Web-page: \url{http://personals.ac.upc.es/rosab/}\\\\ 
+%
+{\it Eduard Ayguadè}, Computer Sciences Department Associate Director at Barcelona Supercomputing Center.\\ 
+Relation: PhD supervisor, email: \href{}{eduard.ayguade@bsc.es},\\
+Web-page: \url{http://people.ac.upc.es/eduard/}\\\\ 
+%
+{\it Pieter Bellens}, Senior researcher at Barcelona Supercomputing Center.\\
+Relation: Present colleague, email: \href{}{pbellens@gmail.com} \\\\
+%
+\end{resume} 
+%
+\end{document} 
+
+

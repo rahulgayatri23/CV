@@ -1,0 +1,88 @@
+	% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[10pt,stdletter,dateno]{newlfm}
+%\usepackage{kpfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+}
+\usepackage{csquotes}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=20pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\namefrom{Rahulkumar\ Gayatri}
+\addrfrom{%
+    \today\\[10pt]
+Carrer Consell de cent, 391,4,2\\
+Barcelona, Catalonia\\
+Spain, 08009
+}
+\phonefrom{+34-699690160}
+\emailfrom{rahulgayatri84@gmail.com}
+
+%\addrto{%
+%Carrer Consell de cent, 391,4,2\\
+%Barcelona, Catalonia\\
+%Spain, 08009}
+
+\greetto{To Whom It May Concern,}
+\closeline{Sincerely,}
+\begin{document}
+\begin{newlfm}
+
+I am writting to apply for the position of \enquote{imec}. 
+I received my Ph.D.\ degree from Universitat Politècnica de Catalunya, Spain, in March, 2015. My advisors are Rosa M.\ Badia and Eduard Ayguadè. In my PhD, I have worked extensively with Parallel Programming Models and on the topic of Speculation using Transactional Memory. 
+%
+\par
+In my graduate work, I focus on speculation techniques to synchronize multiple threads of execution in a parallel processor. My work has been published in \textit{EuroPar 2012} and \textit{HiPC 2013} conferences as well as in \textit{MULTIPROG, 2015} workshop.  
+I am also the co-author of a journal paper published in \textit{Microprocessors and Microsystems, 2014} which explains the work accomplished as a part of the Teraflux project which was sponsored and supported by the European Union. 
+My resume contains the information of all my publications and their references. 
+%
+\par
+The multidisciplinary and challenging area of parallel computing has taught me to find innovative and efficient solutions to a given problem. 
+Work in R\&D did not only provide me with an in depth-knowledge in the areas of mathematics, engineering and CS, but has also given me a valuable insight in the areas of problem analysis, solution design and rapid prototyping.
+As a part of the programming models group at Barcelona Supercomputing Center (\url{http://www.bsc.es/computer-sciences/programming-models}), I have also learned how to effectively collaborate with other engineers to achieve the set goals. 
+I am also a recipient of the FI-AGAUR scholarship from the Catalan government which is a grant given to encourage research.  
+%
+\par
+I would like to use the analytical and problem solving skills that I have acquired to identify research problems and find elegant solutions for them. 
+My objective is to use my experience in parallel programming along with my knowledge of the compiler and runtime development to overcome performance bottlenecks in applications. 
+%
+%After my graduation, for my professional career, I want to use the analytical and problem solving skills acquired in academia to find optimal solutions to real-life problems. 
+%My objective is to explore career opportunities in diverse fields and apply there the knowledge gained from my education. 
+%
+\par
+Please let me know if there are any other materials or information that will assist you in processing my application. 
+Thank you for your consideration. I look forward to hearing from you.
+
+%\section{Publications}\\
+%%Enumerating papers so as to reference later in projects. 
+%%
+%1] \enquote{Loop level speculation in a task based programming model.} \\
+%        \url{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6799132&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fxpls\%2Fabs\_all.jsp\%3Farnumber\%3D6799132}\\\\
+%%
+%2] \enquote{Transactional access to shared memory in StarSs, a task based programming model.} \\
+%        \url{http://link.springer.com/chapter/10.1007/978-3-642-32820-6\_51#page-1} \\\\
+%%
+%3] \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} \\
+%        \url{http://research.ac.upc.edu/multiprog/papers/multiprog-2015-3.pdf} \\\\
+%%
+%4] \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} \\
+%        \url{http://www.sciencedirect.com/science/article/pii/S0141933114000490}
+%
+\end{newlfm}
+\end{document}

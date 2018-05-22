@@ -1,0 +1,108 @@
+	% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[10pt,stdletter,dateno]{newlfm}
+\usepackage{kpfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\usepackage{csquotes}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=20pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\namefrom{Rahulkumar\ Gayatri}
+\addrfrom{%
+    \today\\[10pt]
+3180, Oak Road\\
+Walnut Creek, CA\\
+USA, 94597
+}
+\phonefrom{+1-9253848354}
+\emailfrom{rahulgayatri84@gmail.com}
+
+\greetto{To Whomever It May Concern,}
+\closeline{Sincerely,}
+\begin{document}
+\begin{newlfm}
+%
+    This is a cover letter for the position of \textit{AMD Research: Systems Design Engineer}.
+    My name is Dr. Rahulkumar Gayatri and I am currently working as a NESAP PostDoc at Lawrence Berkeley National Lab in the NERSC department.
+    In here I am involved in the following two projects
+\begin{enumerate}
+    \item {\bf SW4} - Seismic Waves of 4th order accuracy. \\
+        It is an Exascale Computing Project (ECP), where my role is to optimize the  performance of the code on Intel's Knights Landing (KNL) processors.
+        For this, I use techniques such as cache-blocking, vectorization and reducing the overhead incurred due to OpenMP directives.
+        We are currently working on running large scale simulations of SW4 on the Cori supercomputer. For this the goal is to use all 9K KNL nodes available on Cori.
+%
+    \item {\bf Performance Portability} - I also work on implementing portable application codes using programming models such as OpenMP\{3.0, 4.5\}, Kokkos, Cuda, Raja.
+        The aim is to determine the effort required and the performance achieved when using these programming models.
+        I am currently working on porting Berkeley GW (BGW), a set of material science application kernels using the above mentioned programming models.
+        \url{https://github.com/rahulgayatri23/BGW-Kernels}
+\end{enumerate}
+    I use profiling tools such as Intel's Vtune, Advisor, SDE and Nvidia's Visual Proflier(nvvp) and nvprof to analyze the application characteristics.
+    These profiles give us an understanding of what limits the application performance.
+    I use {\it roofline} plots to understand how an application performs compared to the peak performance for a given architecture.
+%
+    \par
+    Prior to my PostDoc, I worked as a technical specialist in the High Performance Computing group (HPC) at Wipro Infotech, Bangalore, India.
+    As part of this group, I provided technical assistance to clients who wanted to parallelize their application/algorithm to achieve higher performance on their multi-core architecture.
+    During this time, one of my major projects was \enquote{Moose} \url{https://moose.ncbs.res.in/}.
+    It involved simulation of neural interactions in a human brain.
+    This project is designed and implemented at the National Center for Biological Sciences, India (NCBS).
+    The application uses a set of linear solvers to calculate the chemical and electrical interactions between the neurons.
+    I used OpenMP to parallelize the solvers and achieved an average of 6X performance improvement on an 8-Core processor.
+%
+    \par
+    I graduated my Doctoral thesis from Barcelona Supercomputing Center (BSC), Barcelona, Spain in March, 2015.
+    My advisors were Rosa M.Badia and Eduard Ayguade.
+    During this period, I was art of the Programming Models group at the Barcelona Supercomputing Center (BSC).
+    My Doctoral thesis was focused on speculative synchronization techniques for OMPSs, a task-based programming model.\\
+%
+    I extended the framework to speculatively update shared memory locations using STM instead of the traditional lock and mutex based mechanisms.
+    An extension to speculative memory updates is the speculative execution of tasks, where tasks can be scheduled before their presence in the execution flow can be confirmed.
+    I implemented a lighweight rollback mechanism which can be used to undo the updates of tasks in case of speculation failure.
+    The idea of greedy task execution improved the performance by an average of 20\% for a select category of applications.
+    At BSC, I also worked on porting applications from the domain of linear iterative solvers and graph algorithms using SMPSs, OMPSs implementation for SMPs.
+    These applications are now a part of their application repository.
+%
+    \par
+    For my Master thesis, I designed and implemented a Breadth First Search algorithm, that optimises the use of low memory available in the Synergistic Processing Element(SPE) of IBM's Cell.B.E processor.
+    The strong point of this implementation was the design of the data structure used to represent a node.
+%
+	\par
+    My current work with optimizing applications for a given architecture and my skills in the field of HPC and Parallel programming make me an ideal candidate for this position.
+    The information regarding my publications is available in my resume.
+    Please let me know if there are any other materials or information that will assist you in processing my application.
+    Thank you for your consideration. I look forward to hearing from you.
+
+%    My work on writing optimized versions of BGW kernels show my ability to write high-performance application codes in C/C++ and my experience in parallel programming.
+%    It also shows my capability with C++ features such as templates which are needed while working with most of the latest programming models.
+%    As a part of my current job, I work on Cori, which comprises of Intel's Haswell and KNL processors as well as on SummitDev which comprises of IBM's Power8 processors and Pascal GPUs.
+%    In the last 10 months, I learnt Cuda to implement optimized versions of BGW kernels. I also adopted Raja and Kokkos to write portable versions of the same kernels.
+%    I worked on running performance tests of \enquote{sw4lite}, a barebone C-version of SW4
+%    \url{https://github.com/geodynamics/sw4lite}.
+%    It contains OpenMP and Raja versions of numerical kernels and is used as a test-bed for performance optimizations.\\
+%%
+%    \par
+%    The current SW4 project and the past Moose projects are comprised of teams from different scientific fields.
+%    As a part of the performance portability group, I collaborate with other members of my team who work on applications from various domains to collaborate and compare our results and the lessons learnt.
+%    I have experience in following my PI and team leaders and at the same time to make use of the freedom given by them to explore and learn while working towards a set goal.
+%    My knowledge in the area of parallel programming models, familiarity with the latest advanced architectures and my ability to write performance portable application code, makes me an ideal candidate for this position.
+%    The position also provides me with an opportunity to continue my work in exploring the latest frameworks and programming models, along with new methods to improve the performance of applications on the new architectures.
+%
+\end{newlfm}
+\end{document}

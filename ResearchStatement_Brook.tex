@@ -1,0 +1,142 @@
+\documentclass[10pt,stdletter,dateno]{newlfm}
+\usepackage{kpfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\usepackage{csquotes}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=20pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\namefrom{Rahulkumar\ Gayatri}
+\addrfrom{%
+    \today\\[10pt]
+3180, Oak Road\\
+Walnut Creek, CA\\
+USA, 94597
+}
+\phonefrom{+1-9253848354}
+\emailfrom{rahulgayatri84@gmail.com}
+
+\greetto{\bf Research Statement}
+\begin{document}
+\begin{newlfm}
+%\maketitle
+
+\section{Motivation}\\
+Most of the major High Performance Research centers are involved in building an exascale machine.
+The idea of a machine that can calculate a billion billion floating point operations in a single second is exciting.
+Application developers have started to port their code into a parallel framework using programming models such as OpenMP and MPI in order to take advantage of the powerful hardware.
+Added to this is the complexity of the performance portable code.
+Most of the big machines are a combination of a CPU and a multi-core processor or an accelerator such as Nvidia's GPU or an FPGA's or an Intel's Xeon Phi.
+An application code optimized for a single architecture may not necessarily give us the best performance on another.
+My current work is focussed on using various programming models such as OpenMP\{3.0, 4.5\}, Kokkos, Cuda, Raja and HPX to asses the effort needed to write codes using them and the portability provided by each.
+I find it challanging to write portable code that can take advantage of the underlying hardware to give us good performance
+I want to be associated in the area of developing application or tools for developing applications that can take advantage of the big machines of the future.
+
+\section{General Statement}\\
+My work and experience is in development and use of parallel programming models to port applications on multi-core architectures.\newline\newline
+For my doctorate thesis I worked on synchronization of multiple threads on a multi-core processor.
+I extended the OMPSs framework to include compiler directives and the associated runtime support for speculative synchronization.\newline\newline
+In my current work as a PostDoc, I am work on performance portability. I work on implementing portable application codes. \newline\newline
+
+My research interests include working in the area of application development or tools for porting applications on big machines.
+
+
+\section{Specific Expertise}\\
+\textbf{PostDoc}
+    In here I am involved in the following two projects
+\begin{enumerate}
+\item {SW4} - Seismic Waves of 4th order accuracy. \\
+    It is an Exascale Computing Project (ECP), where my role is to optimize the  performance of the code on Intel's Knights Landing (KNL) processors.
+    For this, I use techniques such as cache-blocking, vectorization and reducing the overhead incurred due to OpenMP directives.
+    We are currently working on running large scale simulations of SW4 on the Cori supercomputer. For this the goal is to use all 9K KNL nodes available on Cori.
+
+\item {Performance Portability} - I also work on implementing portable application codes using programming models such as OpenMP\{3.0, 4.5\}, Kokkos, Cuda, Raja.
+    The aim is to determine the effort required and the performance achieved when using these programming models.
+    I am currently working on porting Berkeley GW (BGW), a set of material science application kernels using the above mentioned programming models.
+\end{enumerate}
+\textbf{PhD Thesis}
+I graduated my Doctoral thesis from Barcelona Supercomputing Center (BSC), Barcelona, Spain in March, 2015.
+My advisors were Rosa M.Badia and Eduard Ayguade.
+During this period, I was art of the Programming Models group at the Barcelona Supercomputing Center (BSC).
+My Doctoral thesis was focused on speculative synchronization techniques for OMPSs, a task-based programming model.\\
+
+I extended the framework to speculatively update shared memory locations using STM instead of the traditional lock and mutex based mechanisms.
+An extension to speculative memory updates is the speculative execution of tasks, where tasks can be scheduled before their presence in the execution flow can be confirmed.
+I implemented a lighweight rollback mechanism which can be used to undo the updates of tasks in case of speculation failure.
+The idea of greedy task execution improved the performance by an average of 20\% for a select category of applications.
+At BSC, I also worked on porting applications from the domain of linear iterative solvers and graph algorithms using SMPSs, OMPSs implementation for SMPs.
+These applications are now a part of their application repository.
+
+%
+%\begin{thebibliography}{99}
+%
+%\bibitem{BK}
+%\newblock A.~Blum and A.~Kalai.
+%\newblock Universal Portfolios with and without Transaction Costs.
+%\newblock {\em Machine Learning}, 35:3, 1999.
+%
+%\bibitem{Cover}
+%\newblock T.~Cover.
+%\newblock Universal portfolios.
+%\newblock {\em Math. Finance}, 1(1):1-29, January 1991.
+%
+%\bibitem{FK}
+%\newblock A. Frieze and R. Kannan.
+%\newblock Log-Sobolev inequalities and sampling from log-concave distributions.
+%\newblock Annals of Applied Probability 9, 14-26.
+%
+%\bibitem{Helmbold}
+%\newblock D.~Helmbold, R.~Schapire, Y.~Singer, and M.~Warmuth.
+%\newblock On-line portfolio selection using multiplicative updates.
+%\newblock {\em Machine Learning: Proceedings of the Thirteenth
+%International Conference}, 1996.
+%
+%\bibitem{KV}
+%\newblock A.~Kalai and S.~Vempala.
+%\newblock Efficient Algorithms for Universal Portfolios.
+%\newblock To appear in {\em Proceedings of the 41st Annual Symposium on the
+%Foundations of Computer Science (FOCS '00)}, Redondo Beach, 2000.
+%
+%\bibitem{KLS}
+%\newblock R. Kannan, L. Lovasz and M. Simonovits.
+%\newblock Random walks and an $O^*(n^5)$ volume algorithm for convex bodies.
+%\newblock Random Structures and Algorithms 11, 1-50.
+%
+%\bibitem{LW}
+%\newblock N.~Littlestone and M.~Warmuth.
+%\newblock The weighted majority algorithm.
+%\newblock {\em Information and Computation} 108(2):212-261, 1994.
+%
+%\bibitem{Schapire}
+%\newblock R.~Schapire.
+%\newblock The strength of weak learnability.
+%\newblock {\em Machine Learning},
+%5(2):197-227, 1990.
+%
+%\bibitem{VC}
+%\newblock V.~Vapnick and A.~Chervonekis.  On the uniform convergence of
+%relative frequencies of events to their probabilities.  {\em Theory of
+%Probability and its Applications}, 16(2):264-280, 1971.
+%
+%
+%\end{thebibliography}
+
+\end{newlfm}
+\end{document}
+
+

@@ -1,0 +1,95 @@
+	% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[10pt,stdletter,dateno]{newlfm}
+%\usepackage{kpfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+}
+\usepackage{csquotes}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=20pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\namefrom{Rahulkumar\ Gayatri}
+\addrfrom{%
+    \today\\[10pt]
+601, Dream Home Palace\\
+Hyderabad, Telangana\\
+India, 500035
+}
+\phonefrom{+91-7899423040}
+\emailfrom{rahulgayatri84@gmail.com}
+
+\greetto{To Whom It May Concern,}
+\closeline{Sincerely,}
+\begin{document}
+\begin{newlfm}
+	   This is a cover letter for a {\it Postdoc} position in the High Performance Computing Tools group. 
+	   My name is Dr. Rahulkumar Gayatri and I am currently based in Bangalore, India. 
+	   I work as a technical specialist in the High Performance Computing group (HPC) at Wipro Infotech. 
+	   I have been in this position since September 2015. 
+	   I provide technical assistance to clients who wish to parallelize their application/algorithm.
+	   For this, I learn the theory and the science involved in the client's algorithm and apply my knowledge of parallel programming to develop parallel versions of the same.
+%	   
+	   \par
+	   Currently I am working on a project called Moose. It involves simulation of neural interactions in a human brain and falls in the category of computational science. 
+	   The project is designed and implemented at the National Center for Biological Sciences, India (NCBS). 
+	   The software uses a set of linear solvers to calculate the chemical and electrical interactions between the neurons in a cell. 
+	   It is a multi-scale project and allows both distributed and shared memory parallelization to be introduced to speedup the simulation. 
+	   Within each cell shared memory parallelism (using OpenMP and Pthreads) is implemented, so that, each thread updates a part of the cell structure in finite time steps.
+	   The shared memory parallelization gave a performance boost of 5X speedup on 8 threads. 
+	   Currently I am working on the MPI-based implementation, wherein different types of cells, (representing different parts of the brain) are distributed over the available nodes for simultaneous execution. 
+	   The work done on the shared memory parallelism will be a part of the next release of MOOSE.
+%	   
+	   \par
+	   Previous to this, I was a Doctoral student at Barcelona Supercomputing Center (BSC), Barcelona, Spain. I graduated in March, 2015. 
+	   My advisors were Rosa M.Badia and Eduard Ayguade.  
+	   During this period, I was a part of the Programming Models group at the Barcelona Supercomputing Center (BSC). 
+	   My Doctoral thesis was focused on speculative synchronization techniques for the StarSs framework, a task-based programming model.
+	   I extended the StarSs framework to speculatively update shared memory locations using STM, instead of the traditional lock and mutex based mechanisms.
+	   The results achieved with this idea and implementation showed an increase in performance of applications which have high contention for locks. 
+%	   Also the speculative nature of STM increases the available parallelism in an application. 
+%
+	   \par
+	   An extension to speculative memory updates is the speculative execution of tasks, where tasks can be scheduled before their presence in the execution flow can be confirmed.
+	   I implemented a lighweight rollback mechanism which can be used to undo the updates of tasks in case the speculation fails.
+	   The idea of greedy task execution, wherein the tasks are scheduled even before their validity can be ascertained improved the performance by an average of 20\%. 
+	   At BSC, I also worked on porting applications using SMPSs, StarSs implementation for SMPs onto Symmetric Multiprocessors (SMPs).
+%	   I built applications such as NQueens, Specfem, Jacobi and Gauss-Seidel solvers, that show the performance benefits, ease of use and portability of using the StarSs framework. 
+	   I parallelized the Graph500 benchmark suite using SMPSs.
+	   My background in mathematics helps me develop novel ideas for parallelization of algorithms and efficient ways to implement them. 
+	   These applications are a part of the StarSs application repository. 
+%
+	   \par
+	   In my Mtech thesis, I designed and implemented a Breadth First Search algorithm, that optimises the use of low memory available in the Synergistic Processing Element(SPE) of IBM's Cell.B.E processor. 
+	   The strong point of the implementation was this design of the data structure to represent a node, which increased the memory locality.
+%
+	   \par
+	   The above mentioned details highlight my experience in the area of compiler and runtime development for parallel programming models. 
+	   I have worked extensively with STM and on porting applications using widely used programming models such as OpenMP, Pthreads and MPI. 
+	   I am also experienced in the use of various tools to analyze the results obtained and to optimize on the performance bottlenecks.
+	   Working in the programming models group at BSC and in the TERAFLUX project has taught me to effectively collaborate with other researchers to achieve the set goals.
+	   Due to my experience and my skill set, I believe that I will be able to fulfill the duties of a PostDoc researcher in the HPC tools group.
+	   This is my main motivation to apply for the current job. 
+%
+	   \par
+	   The information regarding my publications is available in my resume.
+	   Please let me know if there are any other materials or information that will assist you in processing my application.
+	   Thank you for your consideration. I look forward to hearing from you.
+%
+\end{newlfm}
+\end{document}

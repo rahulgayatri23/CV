@@ -1,0 +1,20 @@
+Data Structures: 
+Linked Lists, Binary Trees, Tries, Stacks, Qjejes, Vectors/ArrayLists, Hashtables
+
+Algorithms - BFS, DFS, Binary Search, Merge Sort, Quick Sort, Tree insert /Find ...
+
+Concepts - Bit Manipulation, Singleton Design Pattern, Factory Design Pattern, Memory(stack vs heap), Recursion, Big-O time
+
+
+Vtable, 
+
+coding question: follow the steps
+1) ask for problem specifics to avoid confusion
+2) Design algorithm
+3) Pseudo-code
+4) Code
+5) test
+
+Difference between median, arithematic median bla bla
+
+whats tree and heap

@@ -1,0 +1,196 @@
+	% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+% the margin option causes section titles to appear to the left of body text
+\textwidth=5.2in % increase textwidth to get smaller right margin
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font
+
+\begin{document}
+
+%\name{NAME\\ [12pfasl://www.amazon.com/End-Times-Bram-Ben-TP/dp/1607069415t]} % the \\[12pt] adds a blank line after name
+%
+\name {Rahulkumar Gayatri}
+\address{
+skype\ :\ rahulkumar.gayatri\\
+email\ :\ rahulgayatri84@gmail.com\\
+phone-number\ :\ 19253848354
+}
+%\address{{\bf Permanent Address} \\ Flat No: 601, Dream Home Palace, Green Hills Colony road no. 1\\ Kothapet, hyd 500035, Telangana, India}
+
+\begin{resume}
+%
+  \section{Summary}
+  \begin{itemize}
+%
+      \item Currently a Postdoc at Lawrence Bekeley National Lab (LBNL). I work in the \enquote{Application Readiness for Exascale Architectures} project in the NERSC department.
+          I have been involved with two projects:
+        \subitem - I write performance portable application kernels using programming models such as OpenMP3.0, OpenMP4.5 (for GPU's), Cuda, Kokkos and RAJA.
+        \subitem - I work on the SW4 project which is a Seismic code that simulates the effects of an earthquake.
+        My work is to improve the performance of the code on the Intel-knl processor.
+%
+	   \item I have worked on the Moose project, a simulation model of neural connections in human brain.
+			 \subitem - My role was to parallelize the ODE solvers used to simulate the electrical and chemical interactions between neurons.
+%
+	   \item Experience in the areas of compiler and runtime development for parallel programming models.
+			 \subitem - Introduced new compiler directives and the necessary runtime support in the OMPSs framework to handle synchronization of multiple threads.
+%
+	   \item Knowledge and experience in the area of Transactional Memory framework.
+			 \subitem - Worked extensively with the TinySTM library.
+%
+	   \item  Experience in sequential and parallel algorithm development.
+			 \subitem  - Designed and implemented a Breadth First Search (BFS) algorithm that takes advantage of low memory on IBM's Cell B/E. processor.
+			 \subitem  - Parallelized Graph500 benchmarks, SPECFEM3D, linear iterative solvers on an SMP machine using the OMPSs programming model.
+%
+	   \item Experience in porting applications using parallel programming models such as OpenMP4.5, Kokkos, OMPSs, MPI, Pthreads.
+%
+	   \item Experience in exploiting the underlying processor arhitecture to enchance the application performance.
+%
+	   \item Experience in working with profiling and analysis tools such as Intel-advisor, Intel-vtune, LIKWID, Intel-SDE, valgrind.
+%
+  \end{itemize}
+
+\section{Education}
+%
+\begin{enumerate}
+	   \item {\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
+		Barcelona Supercomputing Center \\
+		Thesis Title - \enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}\\
+%
+	   \item {\bf Master of Technology }(2009) \\
+		Specialization in Computer Science, Sri Sathya Sai University (SSSU) \\
+%
+    \item {\bf Master of Science (MTech) }(2007) \\
+		Specialization in Computer Science, SSSU
+%
+	   \item {\bf Bachelor of Science} (2005) \\
+		Specialization in Mathematics, SSSU
+%
+\end{enumerate}
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+
+\section{Technical Skills}
+   \begin{tabular}{l p{3in}}
+	\underline{Programming Languages:} & C\smallskip ,C++ \smallskip, python \smallskip \\
+       \underline{Programming Models:} & OpenMP4.5\smallskip, Cuda\smallskip, Kokkos\smallskip, OMPSs\smallskip, OpenMP3.0\smallskip, Pthreads\smallskip, MPI\smallskip, STM\\
+	\underline{Scripting:} & Shell\smallskip, LaTeX\smallskip , Sed\smallskip, awk\smallskip, gnuplot\\
+       \underline{Profiling Tools:} &Intel-vtune\smallskip, Intel-advisor\smallskip, Intel-SDE\smallskip, LIKWID\smallskip, Nvidia Visual Profiler\smallskip, Valgrind\smallskip
+    %\underline{Software:} & Eclipse, Visual Studio 2010\smallskip, GIT\smallskip\\
+ \end{tabular}
+%
+\section{Publications}
+%Enumerating papers so as to reference later in projects.
+%
+\begin{enumerate}
+	   \item \textit{Tuomas Koskela, Zakhar Matveev, Rahulkumar Gayatri, et all}
+			 \enquote{A Novel Multi-Level Integrated Roofline Model Approach for Performance Characterization.} \\
+             \textit{Preleminarily accepted for publication at ISC2018, Frankfurt, Germany. }
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Loop level speculation in a task based programming model.} \\
+             \textit{20th Annual International Conference on High Performance Computing, Bangalore, 2013, pp. 39-48. }
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Transactional access to shared memory in StarSs, a task based programming model.} \\
+             \textit{Euro-Par 2012 Parallel Processing, pp. 514-525}
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} \\
+             \textit{MULTIPROG-2015: proceedings of 8th Workshop on Programmability Issues for Heterogeneous Multicores. Amsterdam: 2015, p. 1-12.}
+%
+	   \item \textit{Roberto Giorgi et al.}
+			 \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} \\
+             \textit{Microprocessors and Microsystems, Volume 38, Issue 8, pp. 976-990}
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Presented a Poster on the benefits of using CellSs ( a programming model for Cell Processor) in the ACACES 2010 summer school of HiPEAC.}
+%
+	   \item \textit{Rahulkumar Gayatri,Pallav Baruah} \enquote{Parallelizing Breadth First Search Using Cell BE, HiPC, Student Symposium, 2008}
+%
+\end {enumerate}
+%
+\section{Projects}
+\begin{enumerate}
+%
+        \item { \bf Berkeley GW} -
+        A material science kernel, that predicts the excited state properties of a wide range of materials..
+        The aim is to port the kernel using different programming models such as OpenMP3.0, OpenMP4.5 (for GPU's using the target directives), Kokkos, RAJA and OpenCL.
+        We compare the performance of the kernel ported using the above mentioned programming models to the best known implementations of the kernel for the specific architecture.
+        The goal is to test the programmability, performance and portability of these frameworks.
+        We are currently running this kernel on machines such as Cori at LBNL (compsising of haswell and KNL processors) and summitdev at Oakridge National lab comprising of
+        4 Nvidia Pascal GPU's on a single node.
+        We have a fortran and a C++ version of the kernels to compare the performance between these programming languages.
+        We catalog the results obtained, lessons learnt and the experiences gained from this project so that the future users might benefit from them.
+        \url{http://performanceportability.org/case_studies/gw/}. It is an open source code which can be found here :
+        \url{https://github.com/rahulgayatri23/BGW-Kernels}
+%
+    \item {\bf SW4} -
+            Seismic wave code of 4th order.
+            It simulates the effects of an earthquake, \url{https://github.com/geodynamics/sw4}.
+            My role in the project is to optimize the code for the Knights Landing architecture from Intel.
+            For this I use techniques such as vectorization, cache-blocking, reducing OpenMP overhead.
+%
+	   \item {\bf MOOSE } -
+             The simulation environment uses various ODE system solvers to understand the chemical and electrical interactions inside a cell.
+			 I worked on parallelizing the ODE solvers that simulate the behavior of the cell over multiple timesteps.
+			 I have parallelized the kinetic and stochastic solvers that solve a system of linear equations using the Runge-Kutta method of order 5.
+			 Kinetic solver achieved a 2.3X speedup with 4 threads whereas the stochastic solver gained a 3.6X speedup.
+%
+	   \item {\bf Doctoral Thesis} -
+			 Focussed in the area of parallel programming models, specifically on providing compiler and runtime support for synchronization of multiple threads in StarSs.
+			 The synchronization was achieved using TinySTM, a Software Transactional Memory Library (STM).
+			 This approach along with improving the performance and the efficiency also offers an opportunity to exploit higher degree of parallelism from an application.
+			 Papers published in this project: [1],[2] and [3].
+%
+	   \item {\bf StarSs} -
+			 A task-based programming model to make parallel programming easier. It consists of compiler directives and the required runtime support.
+			 My contribution to the project was to maintain the runtime framework and resolve conflicts when new directives and their required implementation were introduced.
+			 I also worked on design and implementation of parallel applications using the framework for the application repository.
+%
+	   \item {\bf Teraflux} -
+			 It was a project supported and funded by European Union which focused on exploiting dataflow parallelism in a Teracomputing device.
+%		      It proposes a set of programming model, compiler analysis and a scalable, reliable architecture to harness large scale parallelism in an efficient way.
+ 	    		My contribution to the project was to introduce STM-based concurrency to handle simultaneous access to shared memory.
+	     	Papers published in this project: paper [4].
+%
+	   \item {\bf MTech Thesis} -
+		An efficient Breadth First Search (BFS) implementation that exploits memory locality in the IBM's Cell.B.E architecture.
+		Poster[5] presented the results achieved in this project.
+%
+\end{enumerate}
+%
+\section{Professional Career}
+%
+\begin{itemize}
+    \item * Postdoc at Lawrence Berkeley National Lab.  \\
+	   \item Technical Specialist, High Performance Computing (HPC), Wipro Infotech \\
+			 August, 2015 - September 2016
+	   \item Doctoral student at Barcelona Supercomputing Center - \\
+			 September, 2009 - March, 2015
+\end{itemize}
+%
+\section{Honors}
+Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+
+%
+\section{References}
+\begin{itemize}
+    \item Jack Deslippe, Application Performance Specialist, Acting Group Leader, NERSC. \url{JRDeslippe@lbl.gov}
+    \item Hans Johansen, Computer Systems Engineer, Computational Research, Berkeley Lab. \url{HJohansen@lbl.gov} \textit{Phone: +1 510 495 2472}
+    \item Rosa Maria Badia, WORKFLOWS AND DISTRIBUTED COMPUTING GROUP MANAGER, Barcelona Supercomputing Center. \url{ rosa.m.badia@bsc.es} \textit{Phone: +34 934134075}
+\end{itemize}
+
+\end{resume}
+%
+\end{document}
+
+

@@ -1,0 +1,94 @@
+\documentclass[margin]{res}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+
+\textwidth=5.2in
+\usepackage{helvetica}
+\usepackage{newcent}
+\usepackage{courier}
+
+\title{Coverletter for ATSPEC}
+
+\begin{document}
+%\begin{resume}
+{\maketitle}
+
+\section{Current and Future Work}
+ My name is Rahulkumar Gayatri and I am currently working as a postdoc at the Lawrence Berkeley National Laboratory in the NERSC department.
+ I am in the NESAP program where an application's readiness for the exascale architectures is evaluated.
+ The project involves improving the performance of a compute intensive scientific application on the Cori supercomputer.
+ The aim is to pursue all possible avenues to improve the performance of the application.
+ This includes parallelization, vectorization, improving the memory locality, optimization of cache and register usage.
+ Parallelization will involve both distributed and shared memory approaches using MPI and OpenMP.
+ Exascale programming models such as HPX and kokkos will be explored to determine their usability and performance benefits.
+ I will be working on a seismic wave application that simulates the effects of an earthquake.
+ %
+\section{2015-2016}
+ Prior to this, I worked on the MOOSE project\href{https://moose.ncbs.res.in/}, a software to simulate the cellular behavior in a human brain.
+ The model simulates the behavior of a cell for a given electric or chemical input.
+ The simulation uses the kinetic and stochastic ODE solvers to model the chemical and electrical interactions inside a cell over multiple time steps.
+ Simulating the entire cell for a single time step is a compute intensive process, hence the cell is divided into multiple smaller compartments.
+ The parallelization was done by distributing the compartments among the available cores.
+% I parallelized the simulation by distributing the compartments to the available cores.
+%
+
+ OpenMP programming model was used to parallelize the MOOSE solvers.
+ I used the OpenMP \texttt{for-loop} and \texttt{task} constructs to parallelize different parts of the simulation.
+ I improved the code by reorganizing the data-structures for better memory and cache access.
+ For certain data structures, I added padding in order to prevent false sharing of data in the cache.
+ The number of OpenMP directives (\# pragma OMP parallel ) were optimized.
+ Both the solvers achieved a speedup of 5.3X and 6.8X speedup respectively with 8 threads.
+%
+\section{2009-2015}
+ For my Doctoral thesis, I worked at the Barcelona Supercomputing Center (BSC), as a PhD student.
+ I worked in the programming models group of the computer science department at BSC.
+ I was involved with the StarSs project, a task based programming model, with implementations for widely used multicore architectures.
+ In the StarSs project, I worked on providing compiler directives and the equivalent runtime support for synchronization of multiple threads.
+ I introduced Software Transactional Memory (STM) based concurrency control mechanism to handle critical memory updates.
+ Later I extended, the concept of speculative memory updates to speculative task generation.
+ StarSs tasks blocked due to synchronization directives were speculatively scheduled before their execution in the program flow could be confirmed.
+ I implemented a lightweight rollback mechanism in case the speculation fails.
+ This extension improved the performance of parallel codes by 20\%.
+
+ During my PhD thesis, I also worked on design and implementation of parallel applications using the StarSs framework for it's application repository.
+ I parallelized the Graph500 benchmark, linear iterative solvers such as Gauss-Seidel and Jacobi algorithms and clustering algorithms such as Kmeans and Gmeans.
+ While working on parallelizing applications for the StarSs repository, I used profiling tools such as valgrind and paraver.
+%
+%\section{}
+% My introduction to parallel programming was during my masters project, where I implemented a parallel Breadth First Search algorithm on the IBMs Cell processor.
+% I used the SDK provided by the IBM to program the heterogeneous processors on the Cell Processor.
+% I created and used data structures that will improve the memory locality due to the limited local memory available
+% on the slave processors of Cell B.E.
+%
+\section{Importance of ATSPEC trainings in my future work.}
+As mentioned above, my current and future work involves programming on large scale computing systems.
+In that respect, the training provided at ATSPEC such as the \textit{Sturctured parallel programming} and \textit{Performance, SIMD, Vectorization and Performance Tuning}
+will be highly beneficial for me.
+Similarly the MPI, OpenMP and the hybrid programming models talks will help me on improving application performance which involves both inter and intra node optimizations.
+I will also start working on the Titan supercomputer at the Oakridge national laboratory before the start of the training.
+Hence the GPU specific trainings on day 4 will help me in that regard.
+Also training and exercises on the numerical algorithms, algebraic solvers and FASTMath will be helpful when working with the scientific computing algorithms.
+
+I have only listed some of the trainnigs that will directly be effective in my immediete future work.
+Almost every other training will directly or indirectly help me, like the paraview tool training that is used on Titan supercomputer, or the optimization courses.
+The presentations such as code documentation are really helpful in writing good code that can later be used by other programmers.
+%
+\section{Conclusion}
+ As mentioned above, I have experience in HPC field as a parallel application developer and in the area of development of parallel programming models.
+ Also my current and future work is based on extreme scale computing and the trainings provided at ATSPEC will be immensely helpful in improving the quality of my work.
+%
+% I have also worked on parallelizing scientific applications to improve their performance using OpenMP.
+% Currently and as a part of the postdoc, I intend to work on improving the performance of applications on large scale computing systems such as the cori supercomputer.
+% %My future plan is to now work on porting applications on large-scale systems which include the Cori system which is composed of over 9000 nodes with 68 cores per node.
+% I believe that the ATSPEC training will provide me with the knowledge and tools that will help me develop applications that will utilize such high computing power.
+ This is the main reason, I believe that I can be one of the candidates that will benefit immensely from this training program.
+
+% \end{resume}
+
+\end{document}

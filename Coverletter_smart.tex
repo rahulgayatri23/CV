@@ -1,0 +1,105 @@
+	% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[10pt,stdletter,dateno]{newlfm}
+%\usepackage{kpfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\usepackage{csquotes}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=20pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\namefrom{Rahulkumar\ Gayatri}
+\addrfrom{%
+    \today\\[10pt]
+601, Dream Home Palace\\
+Hyderabad, Telangana\\
+India, 500035
+}
+\phonefrom{+91-7899423040}
+\emailfrom{rahulgayatri84@gmail.com}
+
+\greetto{To Whom It May Concern,}
+\closeline{Sincerely,}
+\begin{document}
+\begin{newlfm}
+	   This is a cover letter for the position of {\it Senior Software Engineer} for the development of the SimMobility Short and Mid Term activity based simulation software.
+	   My name is Dr. Rahulkumar Gayatri and I am currently based in Bangalore, India.
+	   I work as a technical specialist in the High Performance Computing group (HPC) of Wipro Infotech.
+	   I have been in this position for the last six months.
+	   My major responsibilities include providing assistance and the necessary technical help to clients who wish to parallelize their application/algorithm.
+	   The level of my involvement depends on the client's need. I collaborate at design, implementation and analysis or all the stages.
+	   The technologies I use depend on the infrastructure of the client. I use the Pthreads and the OpenMP programming models more frequently to parallelize the code.
+	   I am also experienced with the MPI, OMPSs and STM-based programming models.
+%
+	   \par
+	   Currently I am working on a project called Moose, which involves simulation of neurons in human brain.
+	   The project was designed and implemented at the National Center for Biological Sciences, India (NCBS).
+	   The multiscale characteristic of this project allows both distributed and shared memory parallelization to be introduced to speedup the simulation.
+	   At present, my focus is on the thread-based implementation using pthreads, where each thread updates a part of the cell structure at every time-step.
+	   Later on, the project will include simultaneous updates of different cells on different nodes, which in turn will use threaded parallelism within the cell.
+%
+	   \par
+	   Previous to this, I was a Doctoral student at Barcelona Supercomputing Center (BSC), Barcelona, Spain. I graduated in March, 2015.
+	   My advisors were Rosa M.Badia and Eduard Ayguade. Their contact information is included in my resume.
+	   During this period, I was a part of the Programming Models group at the Barcelona Supercomputing Center (BSC).
+	   My Doctoral thesis was focused on speculative synchronization techniques for the StarSs framework, a task-based programming model.
+	   Synchronization of threads in a shared memory muti-core processor is necessary during critical memory update and to maintain sequential consistency of the parallel code.
+%
+	   \par
+	   Speculative synchronization using Software Transactional Memory (STM) based approach was adopted instead of the traditional locks and mutexes to achieve concurrency.
+	   I extended the StarSs framework with compiler directives and the associated runtime support for concurrency control among multiple threads.
+	   The results achieved with this implementation showed an increase in performance of applications which have high contention for locks.
+	   Also the speculative nature of STM increases the available parallelism in an application.
+%
+	   \par
+	   An extension to speculative memory updates is speculative execution of tasks.
+	   Compiler and runtime assistance was added to the StarSs framework where tasks can be scheduled before their presence in the execution flow can be confirmed.
+	   Such speculatively generated tasks are executed as transactions so that their updates can be rolled back in case the speculation fails.
+	   To avoid the overhead associated with an STM-framework, such as conflict detection and concurrency control, I implemented a lighweight rollback mechanism which can be used to undo the updates of tasks.
+	   The idea of greedy task execution, wherein the tasks are scheduled even before their validity can be ascertained has given an average of 20\% performance benefits.
+	   This is a highly positive result, since the performance improvement was achieved on an already parallelized code.
+%
+	   \par
+	   Also at BSC, I worked on porting applications using SMPSs, StarSs implementation for SMPs onto Symmetric Multiprocessors (SMPs).
+	   I built applications that show the performance benefits, ease of use and portability of using the StarSs framework.
+	   The applications are a part of th StarSs application repository.
+	   My background in mathematics helps me develop novel ideas for parallelization of algorithms and efficient ways to implement them.
+	   In my Mtech thesis, I designed and implemented a Breadth First Search algorithm, that optimises the use of low memory available in the Synergistic Processing Ellement(SPE) of IBM's Cell.B.E processor.
+	   The strong point of the implementation was the design of a data structure to represent node. This data structure helped in increasing memory locality.
+%
+	   \par
+	   My doctoral work has been published in \textit{EuroPar 2012} and \textit{HiPC 2013} conferences as well as in \textit{MULTIPROG, 2015} workshop.
+	   I am also the co-author of a journal paper published in \textit{Microprocessors and Microsystems, 2014} which explains the work accomplished as a part of the Teraflux project which was sponsored and supported by the European Union.
+	   I have 2 posters which highlight my work on parallelization of applications.
+	   My resume contains the information of all my publications.
+%
+	   \par
+	   The implementations of the above mentioned ideas and parallel applications were done using the C and C++ programming language.
+	   My current job as the lead technical consultant for the HPC group has given me exposure to the software project cycle.
+	   As a part of the programming models group at Barcelona Supercomputing Center (\url{http://www.bsc.es/computer-sciences/programming-models}), I have also learned to effectively collaborate with other engineers to achieve the set goals.
+	   Working with the TERAFLUX group gave me the experience of collaborating with researchers and engineers who are at different physical locations.
+	   %
+	   \par
+	   The above mentioned details i.e., my background in C and C++ programming languages, widely used programming models such as pthreads and OpenMP, my experience of designing and implementing parallel algorithms are a high match to the requirements of the job posting.
+	   This is the reason, I request you to consider my application.
+	   Please let me know if there are any other materials or information that will assist you in processing my application.
+	   Thank you for your consideration. I look forward to hearing from you.
+%
+\end{newlfm}
+\end{document}

@@ -1,0 +1,114 @@
+	% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+% the margin option causes section titles to appear to the left of body text
+\textwidth=5.2in % increase textwidth to get smaller right margin
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font
+
+\begin{document}
+
+%\name{NAME\\ [12pfasl://www.amazon.com/End-Times-Bram-Ben-TP/dp/1607069415t]} % the \\[12pt] adds a blank line after name
+%
+\name {Rahulkumar Gayatri}
+\address{
+email\ :\ rahulgayatri84@gmail.com\\
+phone-number\ :\ +1-9253848354
+}
+%\address{{\bf Permanent Address} \\ Flat No: 601, Dream Home Palace, Green Hills Colony road no. 1\\ Kothapet, hyd 500035, Telangana, India}
+
+\begin{resume}
+%
+    \section{Current Position }
+    \begin{itemize}
+        \item \textbf{\textit{\textrm{Title}}} - Exascale Science Application PostDoctoral Fellow. \\
+            Lawrence Berkeley National Lab.
+        \item \textbf{\textit{\textrm{Description}}} - HPC Application Optimization Engineer and Performance Portable Application Developer.
+    \end{itemize}
+%
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+%
+\section{Projects}
+\begin{itemize}
+%
+    \item \textbf{\textit{\textrm{{Berkeley GW}}}} \\
+        - Material science kernel used as a case study for performance portability.\\
+        - Implemented KNL and GPU specific code and compared the performance with their OpenMP4.5x and Kokkos implementations.\\
+        \url{http://performanceportability.org/case_studies/gw/}
+%
+    \item \textbf{\textit{\textrm{{SW4}}}} -
+            Optimized the code for Intel's Knight landing architecture by enabling vectorization, cache blocking and reducing OpenMP overhead.\\
+            \url{https://github.com/geodynamics/sw4lite}
+%
+    \item \textbf{\textit{\textrm{{MOOSE}}}} -
+           Parallelize and optimize the ODE system solvers used to simulate cellular behaviour in human brain.\\
+           \url{https://moose.ncbs.res.in/}
+%
+    \item \textbf{\textit{\textrm{{Doctoral Thesis:  OMPSs}}}} -
+           Compiler and runtime support for multiple threads in OMPSs.
+%
+%	   \item {\bf Master Thesis} -
+%		An efficient Breadth First Search (BFS) implementation that exploits memory locality in the IBM's Cell.B.E architecture.
+%
+\end{itemize}
+
+
+\section{Proficiencies}
+\begin{itemize}
+    \item \textbf{\textit {Languages}:} C,C++ , python
+    \item \textbf{\textit {Programming Models}:} OpenMP4.5, OpenMP3.0, Cuda, Kokkos, OMPSs, Pthreads, MPI, STM
+    \item \textbf{\textit {Scripting}:} Shell, LaTeX, Sed, awk, gnuplot
+    \item \textbf{\textit {Profiling Tools}:} Intel-vtune, Intel-advisor, Intel-SDE, LIKWID, gdb, Valgrind
+\end{itemize}
+%
+\section{Publications}
+%Enumerating papers so as to reference later in projects.
+%
+\begin{itemize}
+	   \item \enquote{Loop level speculation in a task based programming model.}
+           \textit{High Performance Computing (HiPC), 2013 20th International Conference}
+%
+	   \item \enquote{Transactional access to shared memory in StarSs, a task based programming model.}
+           \textit{Euro-par, 2012 Parallel Processing}
+%
+	   \item \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.}
+           \textit{MULTIPROG, workshop at HiPEAC, 2015}
+%
+	   \item \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.}
+           \textit{Microprocessors and Microsystems}
+%
+	   \item \enquote{Parallelizing Breadth First Search Using Cell BE, HiPC, Student Symposium, 2008}
+%
+\end {itemize}
+\section{Education}
+%
+\begin{itemize}
+	   \item {\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
+		\enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}
+%
+    \item {\bf Master of Technology, Computer Science } {\textit GPA - 4.75/5.00} (2009)
+%
+\end{itemize}
+%
+%\section{Professional Career}
+%%
+%\begin{itemize}
+%    \item - * Postdoc at Lawrence Berkeley National Lab.
+%	\item - Technical Specialist, High Performance Computing (HPC), Wipro Infotech
+%\end{itemize}
+%
+        \section{linkedin} \url{https://www.linkedin.com/in/rahulgayatri/}
+\end{resume}
+%
+\end{document}
+
+

@@ -1,0 +1,154 @@
+	% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res} 
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+}
+% the margin option causes section titles to appear to the left of body text 
+\textwidth=5.2in % increase textwidth to get smaller right margin
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\begin{document} 
+ 
+\name{NAME\\ [12pt]} % the \\[12pt] adds a blank line after name
+ 
+\address{
+ Skype\ :\ rahulkumar.gayatri\\
+ email\ :\ rahulgayatri84@gmail.com\\
+ phone-number\ :\ +91-7789423040
+ }
+%\address{{\bf Permanent Address} \\ Flat No: 601, Dream Home Palace, Green Hills Colony road no. 1\\ Kothapet, hyd 500035, Telangana, India}
+
+ 
+\begin{resume} 
+%
+  \section{Summary}
+  \begin{itemize}
+%	   \item  Working in the area of HPC since 2008.
+
+%
+	   \item  Experience in sequential and parallel algorithm development.
+			 \subitem  - Designed and implemented a Breadth First Search (BFS) algorithm that takes advantage of low memory on IBM's Cell B/E. processor. 
+			 \subitem  - Parallelized Graph500 benchmarks on an SMP machine using the StarSs programming model.
+			 \subitem  - Experience in the design and parallel implementations of SPECFEM3D and linear iterative solvers such as Jacobi and Gauss-Seidel methods. 
+%
+	   \item Experience in the areas of compiler and runtime development for parallel programming models.
+			 \subitem - Introduced new compiler directives and the necessary runtime support in the StarSs framework to handle synchronization of multiple threads.
+%
+	   \item Knowledge and experience in the area of Transactional Memory framework.
+			 \subitem - Worked extensively with the TinySTM library.
+%
+	   \item Worked with Pthreads, OpenMP, OMPSs and MPI programming models.
+	   \item Published conference, workshop and journal papers in international formats.
+	   \item Familiarity with tools like valgrind profiler, gdb, google performance tools, latex software.
+%
+	   \item Currently working Moose, a multi-scale simulation model of neuron connections in human brain.
+			 \subitem - It is a multiscale problem which provides an opportunity for both distributed and thread-based parallelism.
+%	   
+	   \item Basic knowledge in the areas of GPU and Cuda Programming. 
+%
+  \end{itemize}
+
+\section{Education} 
+%
+\begin{enumerate}
+	   \item {\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
+		Barcelona Supercomputing Center \\
+		Thesis Title - \enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}\\
+%
+	   \item {\bf Master of Technology }(2009) \\
+		Specialization in Computer Science, Sri Sathya Sai University (SSSU) \\
+%
+	   \item {\bf Master of Science }(2007) \\
+		Specialization in Computer Science, SSSU
+%
+	   \item {\bf Bachelor of Science} (2005) \\
+		Specialization in Mathematics, SSSU 
+%
+\end{enumerate}
+%
+\section{Publications}
+%Enumerating papers so as to reference later in projects. 
+%
+\begin{enumerate}
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Loop level speculation in a task based programming model.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Transactional access to shared memory in StarSs, a task based programming model.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade} 
+			 \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} \\
+%
+	   \item \textit{Roberto Giorgi et al.}
+			 \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} \\
+%	   
+	   \item \textit{Rahulkumar Gayatri,Pallav Baruah} \enquote{Parallelizing Breadth First Search Using Cell BE, HiPC, Student Symposium, 2008}
+%	   
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade} 
+			 \enquote{Presented a Poster on the benefits of using CellSs ( a programming model for Cell Processor) in the ACACES 2010 summer school of HiPEAC.}
+%
+\end {enumerate}
+%
+\section{Projects} 
+\begin{enumerate}
+%
+	   \item {\bf Doctoral Thesis} - 
+			 Focussed in the area of parallel programming models. Specifically on providing compiler and runtime support for synchronization of multiple threads in StarSs, a task-based 
+			 programming model. To achieve this, an optimistic approach is adopted based on the Transactional Memory framework. An external Software Transactional Memory (STM) library 
+			 is integrated into StarSs. 
+			 This approach along with improving the performance and the efficiency also offers an opportunity to exploit higher degree of parallelism from an application.
+			 Papers published in this project: [1],[2] and [3].
+%
+	   \item {\bf StarSs} - 
+			 A task-based programming model to make parallel programming easier. It consists of compiler directives and the required runtime support.
+			 It generates a task-dependency graph at runtime based on the data-flow principles. 
+			 My contribution to the project was to maintain the runtime framework and resolve conflicts when new directives and their required implementation were introduced.
+			 I also worked on design and implementation of applications such as Specfem3D, NQueens, Matrix Multiplication, Linear iterative solver, Gmeans, Kmeans for the StarSs application repository. 
+%
+	   \item {\bf Teraflux} - 
+			 It was a project supported and funded by European Union which focused on exploiting dataflow parallelism in a Teracomputing device.
+		      The project proposes a set of programming model, compiler analysis and a scalable, reliable architecture that will be able to harness large scale parallelism in an efficient way. 
+ 	    		My contribution to the project was to introduce STM-based concurrency to handle simultaneous access to shared memory.\\
+	     	Papers published in this project: paper [4].
+%
+	   \item {\bf MTech Thesis} -
+		An efficient Breadth First Search (BFS) implementation that exploits memory locality in the IBM's Cell.B.E architecture.  
+		Poster[5] presented the results achieved in this project. 
+%
+\end{enumerate}
+%
+\section{Professional Career}
+%
+Doctoral student at Barcelona Supercomputing Center - \\ 
+September, 2009 - March 2015 \\\\
+Technical Specialist, HPC, Wipro Infotech\\
+September 2015 - present day
+%
+\section{Honors} 
+Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+
+\section{Programming Languages and Models}
+   \begin{tabular}{l p{3in}}
+    \underline{Languages:} & C\smallskip ,C++ \smallskip \\
+	\underline{Scripting:} & Shell\smallskip, LaTeX\smallskip , Sed\smallskip, awk\smallskip, gnuplot\\
+	\underline{Programming Models:} & StarSs\smallskip, OpenMP\smallskip, Pthreads\smallskip, MPI\smallskip, STM\\
+	\underline{Operating Systems:}  & Microsoft Windows\smallskip , Linux\\
+    \underline{Software:} & Eclipse, Visual Studio 2010\smallskip, GIT\smallskip\\
+    \underline{Profiling Tools:} &gdb, Valgrind\smallskip \\ 
+ \end{tabular}
+%
+\end{resume} 
+%
+\end{document} 
+
+

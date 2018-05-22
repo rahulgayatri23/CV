@@ -1,0 +1,166 @@
+	% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+% the margin option causes section titles to appear to the left of body text
+\textwidth=5.2in % increase textwidth to get smaller right margin
+\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font
+
+\begin{document}
+
+%\name{NAME\\ [12pfasl://www.amazon.com/End-Times-Bram-Ben-TP/dp/1607069415t]} % the \\[12pt] adds a blank line after name
+%
+%\address{
+% skype\ :\ rahulkumar.gayatri\\
+% email\ :\ rgayatri@lbl.gov\\
+% phone-number\ :\ 19253848354
+% }
+%\address{{\bf Permanent Address} \\ Flat No: 601, Dream Home Palace, Green Hills Colony road no. 1\\ Kothapet, hyd 500035, Telangana, India}
+\textbf{Curriculam Vitae }
+
+\begin{resume}
+%
+  \section{Summary}
+  \begin{itemize}
+%
+    \item Currently a PostDoc at Lawrence Berkeley. Working on \enquote{Application Readiness for Exascale Architectures"} as a NESAP PostDoc in the NERSC department.
+%
+	   \item Previously worked on the Moose project, a simulation model of neural connections in human brain.
+			 \subitem - It is a multiscale problem which provides an opportunity for both distributed and thread-based parallelism.
+%
+	   \item Experience in the areas of compiler and runtime development for parallel programming models.
+			 \subitem - Introduced new compiler directives and the necessary runtime support in the StarSs framework to handle synchronization of multiple threads.
+%
+	   \item Knowledge and experience in the area of Transactional Memory framework.
+			 \subitem - Worked extensively with the TinySTM library.
+%
+	   \item  Experience in sequential and parallel algorithm development.
+			 \subitem  - Designed and implemented a Breadth First Search (BFS) algorithm that takes advantage of low memory on IBM's Cell B/E. processor.
+			 \subitem  - Parallelized Graph500 benchmarks, SPECFEM3D, linear iterative solvers on an SMP machine using the StarSs programming model.
+%
+	   \item Worked with Pthreads, OpenMP, OMPSs and MPI programming models.
+	   \item Experience in collaborating with other researchers and engineers to achieve the set goals.
+	   \item Experience in exploiting the underlying processor arhitecture to enchance the application performance.
+
+	   \item Familiarity with tools like valgrind profiler, gdb, google performance tools, latex software.
+%
+	   \item Basic knowledge of GPU, Cuda Programming and Intel Xeon Phi.
+%
+  \end{itemize}
+
+\section{Education}
+%
+\begin{enumerate}
+	   \item {\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
+		Barcelona Supercomputing Center \\
+		Thesis Title - \enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}\\
+%
+	   \item {\bf Master of Technology }(2009) \\
+		Specialization in Computer Science, Sri Sathya Sai University (SSSU) \\
+%
+	   \item {\bf Master of Science }(2007) \\
+		Specialization in Computer Science, SSSU
+%
+	   \item {\bf Bachelor of Science} (2005) \\
+		Specialization in Mathematics, SSSU
+%
+\end{enumerate}
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+
+\section{Programming Languages and Models}
+   \begin{tabular}{l p{3in}}
+	\underline{Languages:} & C\smallskip ,C++ \smallskip, python \smallskip \\
+	\underline{Scripting:} & Shell\smallskip, LaTeX\smallskip , Sed\smallskip, awk\smallskip, gnuplot\\
+	\underline{Programming Models:} & StarSs\smallskip, OpenMP\smallskip, Pthreads\smallskip, MPI\smallskip, STM\\
+    \underline{Profiling Tools:} &gdb, valgrind\smallskip, google-performance tools\smallskip \\
+    %\underline{Software:} & Eclipse, Visual Studio 2010\smallskip, GIT\smallskip\\
+ \end{tabular}
+%
+\section{Publications}
+%Enumerating papers so as to reference later in projects.
+%
+\begin{enumerate}
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Loop level speculation in a task based programming model.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Transactional access to shared memory in StarSs, a task based programming model.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Analysis of the overheads incurred due to speculation in a task based programming model.} \\
+%
+	   \item \textit{Roberto Giorgi et al.}
+			 \enquote{TERAFLUX: Harnessing dataflow in next generation teradevices.} \\
+%
+	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
+			 \enquote{Presented a Poster on the benefits of using CellSs ( a programming model for Cell Processor) in the ACACES 2010 summer school of HiPEAC.}
+%
+	   \item \textit{Rahulkumar Gayatri,Pallav Baruah} \enquote{Parallelizing Breadth First Search Using Cell BE, HiPC, Student Symposium, 2008}
+%
+\end {enumerate}
+%
+\section{Previous Projects}
+\begin{enumerate}
+			 %
+	   \item {\bf MOOSE } -
+			 The software simulates the neural systems ranging from subcellular components and biochemical reactions to models of single neurons. The simulation environment uses various ODE system solvers to understand the chemical and electrical interactions inside a cell.
+			 It is developed by National Center for Biological Sciences (NCBS), India.
+       In this project my role was to parallelize the ODE solvers that simulate the behavior of a cell over multiple timesteps.
+       I successfully implemented an OpenMP based parallelization for the kinetic and stochastic solvers in the simulation.
+       That included solving a system of linear equations that use the Runge-Kutta method of order 5.
+       The solvers are used in simulating the effect of a chemical impulse input to a given cell.
+			 Kinetic solver achieved a 5.3X speedup with 8 threads whereas the stochastic solver gained a 6.8X speedup.
+%
+	   \item {\bf Doctoral Thesis} -
+			 Focused in the area of parallel programming models, specifically on providing compiler and runtime support for synchronization of multiple threads in StarSs.
+			 The synchronization was achieved using TinySTM, a Software Transactional Memory Library (STM).
+			 This approach along with improving the performance and the efficiency also offers an opportunity to exploit higher degree of parallelism from an application.
+			 Papers published in this project: [1],[2] and [3].
+%
+	   \item {\bf StarSs} -
+			 A task-based programming model to make parallel programming easier. It consists of compiler directives and the required runtime support.
+			 My contribution to the project was to maintain the runtime framework and resolve conflicts when new directives and their required implementation were introduced.
+			 I also worked on design and implementation of parallel applications using the framework for the application repository.
+%
+	   \item {\bf Teraflux} -
+			 It was a project supported and funded by European Union which focused on exploiting dataflow parallelism in a Teracomputing device.
+%		      It proposes a set of programming model, compiler analysis and a scalable, reliable architecture to harness large scale parallelism in an efficient way.
+ 	    		My contribution to the project was to introduce STM-based concurrency to handle simultaneous access to shared memory.
+	     	Papers published in this project: paper [4].
+%
+	   \item {\bf MTech Thesis} -
+		An efficient Breadth First Search (BFS) implementation that exploits memory locality in the IBM's Cell.B.E architecture.
+		Poster[5] presented the results achieved in this project.
+%
+\end{enumerate}
+%
+\section{Professional Career}
+%
+\begin{enumerate}
+     \item Currently NESAP Post-doc at NERSC department, Lawrence Berkeley Lab.
+	   \item Technical Specialist, High Performance Computing (HPC), Wipro Infotech \\
+			 August, 2015 - September 2016
+	   \item Doctoral student at Barcelona Supercomputing Center - \\
+			 September, 2009 - March, 2015
+\end{enumerate}
+%
+\section{Honors}
+Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+
+%
+%\section{References}
+%To be provided on request.
+\end{resume}
+%
+\end{document}
+
+
