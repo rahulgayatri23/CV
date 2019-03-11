@@ -18,8 +18,6 @@ urlcolor=blue,
 \newcommand{\frstCVcell}{2.5cm}
 
 \begin{document}
-
-%\name{NAME\\ [12pfasl://www.amazon.com/End-Times-Bram-Ben-TP/dp/1607069415t]} % the \\[12pt] adds a blank line after name
 %
 \name {Rahulkumar Gayatri}
 \address{
@@ -33,33 +31,76 @@ phone-number\ :\ 19253848354
 %
   \section{Summary}
   \begin{itemize}
-%
-      \item Currently a Postdoc at Lawrence Bekeley National Lab (LBNL). I work in the \enquote{Application Readiness for Exascale Architectures} project in the NERSC department.
-          I have been involved with two projects:
-        \subitem - I write performance portable application kernels using programming models such as OpenMP3.0, OpenMP4.5 (for GPU's), Cuda, Kokkos and RAJA.
-        \subitem - I work on the SW4 project which is a Seismic code that simulates the effects of an earthquake.
-        My work is to improve the performance of the code on the Intel-knl processor.
-%
-	   \item I have worked on the Moose project, a simulation model of neural connections in human brain.
+          %
+      \item Currently an Application Performance Specialist in the application performance group at NERSC, Lawrence Berkeley National Laboratory (LBL).
+          My job duties require to help science teams optimize their codes for future high performance architectures.
+          As a part of the staff member at NERSC I am involved with two main projects
+          \begin{enumerate}
+              \item EXAALT - an Exascale Computing Project (ECP) molecular dynamics application
+              \item ECP Application Assesment - assess and reproduce the results presented by ECP applications. Analyze the bottlenecks and provide guidance to the respective teams to overcome the challenges.
+          \end{enumerate}
+    %
+      \item Previously a Postdoc at NERSC, LBL.
+          During that time, I worked in the \enquote{Application Readiness for Exascale Architectures} project in the NERSC department.
+          I was involved with two projects:
+          \begin{enumerate}
+              \item Writing performance portable application kernels using programming models such as OpenMP\{3.0, 4.5\}, Cuda, Kokkos, OpenACC and RAJA.
+              \item SW4 - I worked on the SW4 project, which is a Seismic code that simulates the effects of an earthquake.
+                My role in the project is to improve the performance of the code on the Intel-knl processor.
+          \end{enumerate}
+    %
+      \item  Mentored GPU hackathons. I helped science teams during hackathons that focussed on porting their codes on to the NVIDIA GPUs.
+          We succesfully ported and optimized codes on newer generation GPU hardware used on top supercomputers such as Summit and Cori.
+          %
+      \item Succesfully organized and led the workshop and tutorial at the 2018 Computational Science Graduate Fellowship (CSGF) held in Washington,DC.
+    %
+	   \item Worked on the Moose project, a simulation model of neural connections in human brain.
 			 \subitem - My role was to parallelize the ODE solvers used to simulate the electrical and chemical interactions between neurons.
-%
+    %
 	   \item Experience in the areas of compiler and runtime development for parallel programming models.
 			 \subitem - Introduced new compiler directives and the necessary runtime support in the OMPSs framework to handle synchronization of multiple threads.
-%
+    %
 	   \item Knowledge and experience in the area of Transactional Memory framework.
-			 \subitem - Worked extensively with the TinySTM library.
-%
+%			 \subitem - Worked extensively with the TinySTM library.
+    %
 	   \item  Experience in sequential and parallel algorithm development.
 			 \subitem  - Designed and implemented a Breadth First Search (BFS) algorithm that takes advantage of low memory on IBM's Cell B/E. processor.
 			 \subitem  - Parallelized Graph500 benchmarks on an SMP machine using the OMPSs programming model.
 %
-	   \item Experience in porting applications using parallel programming models such as OpenMP4.5, Kokkos, OMPSs, MPI, Pthreads.
+%	   \item Experience in porting applications using parallel programming models such as OpenMP4.5, Kokkos, OMPSs, MPI, Pthreads.
 %
-%	   \item Experience in exploiting the underlying processor arhitecture to enchance the application performance.
+	   \item Experience in exploiting the underlying processor arhitecture to enchance the application performance.
 %
-	   \item Experience in working with profiling and analysis tools such as Intel-advisor, Intel-vtune, LIKWID, Intel-SDE, valgrind.
+	   \item Experience in working with profiling and analysis tools such as Intel-advisor, Intel-vtune, LIKWID, Intel-SDE, Nvprof, valgrind.
 %
   \end{itemize}
+
+\section{Technical Skills}
+
+    \subsection{Programming Languages} - C, C++, Fortran, Python
+    %
+    \subsection{Programming Models} - MPI, OpenMP, CUDA, Kokkos, OpenACC, OMPSs, Pthreads, STM
+    %
+    \subsection{Scripting} - Shell, Latex, Sed, Awk, gnuplot
+    %
+    \subsection{Profiling Tools} - Intel Vtune, Intel Vector Advisor, Intel SDE, LIKWID, Nvidia Visual Profiler (NVVP), Nsight, Valgrind
+    %
+    \subsection{Operating Systems} - Unix, Linux, Windows
+
+%Down below is the tabular form in case you want to save space
+%%
+%    \begin{center}
+%        \begin{tabular} {|p{3cm} || p{7cm}| } \hline
+%%
+%            \begin{center}Programming Languages \end{center} & \begin{center} C, C++, Python \end{center} \\ \hline
+%%
+%            \begin{center} Programming Models \end{center} & \begin{center} OpenMP{3.0, 4.5}, Cuda, Kokkos, OpenACC, OMPSs, Pthreads, STM, MPI \end{center} \\ \hline
+%%
+%            \begin{center} Scripting \end{center} & \begin{center} Shell, Latex, Sed, Awk, gnuplot \end{center} \\ \hline
+%%
+%                \begin{center} Profiling Tools \end{center} & \begin{center} Intel-Vtune, Intel-Advisor, Intel-SDE, LIKWID, Nvidia Visual Profiler, Valgrind \end{center} \\ \hline
+%        \end{tabular}
+%    \end{center}
 
 \section{Education}
 
@@ -84,52 +125,21 @@ phone-number\ :\ 19253848354
         \end{tabular}
     \end{center}
 
-%\begin{enumerate}
-%	   \item {\bf Doctor of Philosophy (PhD)  in Computer Science } (2015) \\
-%		Barcelona Supercomputing Center \\
-%		Thesis Title - \enquote{Increasing Parallelism through Speculation in Task-Based Programming Model.}\\
-%%
-%	   \item {\bf Master of Technology }(2009) \\
-%		Specialization in Computer Science, Sri Sathya Sai University (SSSU) \\
-%%
-%    \item {\bf Master of Science (MTech) }(2007) \\
-%		Specialization in Computer Science, SSSU
-%%
-%	   \item {\bf Bachelor of Science} (2005) \\
-%		Specialization in Mathematics, SSSU
-%%
-%\end{enumerate}
-% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
-
-\section{Technical Skills}
-%
-    \begin{center}
-        \begin{tabular} {|p{3cm} || p{7cm}| } \hline
-%
-            \begin{center}Programming Languages \end{center} & \begin{center} C, C++, Python \end{center} \\ \hline
-%
-            \begin{center} Programming Models \end{center} & \begin{center} OpenMP{3.0, 4.5}, Cuda, Kokkos, OMPSs, Pthreads, STM, MPI \end{center} \\ \hline
-%
-            \begin{center} Scripting \end{center} & \begin{center} Shell, Latex, Sed, Awk, gnuplot \end{center} \\ \hline
-%
-                \begin{center} Profiling Tools \end{center} & \begin{center} Intel-Vtune, Intel-Advisor, Intel-SDE, LIKWID, Nvidia Visual Profiler, Valgrind \end{center} \\ \hline
-        \end{tabular}
-    \end{center}
-%   \begin{tabular}{l p{3in}}
-%	\underline{Programming Languages:} & C\smallskip ,C++ \smallskip, python \smallskip \\
-%       \underline{Programming Models:} & OpenMP4.5\smallskip, Cuda\smallskip, Kokkos\smallskip, OMPSs\smallskip, OpenMP3.0\smallskip, Pthreads\smallskip, MPI\smallskip, STM\\
-%	\underline{Scripting:} & Shell\smallskip, LaTeX\smallskip , Sed\smallskip, awk\smallskip, gnuplot\\
-%       \underline{Profiling Tools:} &Intel-vtune\smallskip, Intel-advisor\smallskip, Intel-SDE\smallskip, LIKWID\smallskip, Nvidia Visual Profiler\smallskip, Valgrind\smallskip
-%    %\underline{Software:} & Eclipse, Visual Studio 2010\smallskip, GIT\smallskip\\
-% \end{tabular}
-%
 \section{Publications}
 %Enumerating papers so as to reference later in projects.
-%
+
 \begin{enumerate}
+	   \item \textit{Rahulkumar Gayatri, Charlene Yang, Thorsten Kurth, Jack Deslippe}
+			 \enquote{A Case Study for Performance Portability using OpenMP 4.5.} \\
+             WACCPD, 2018.
+%
+	   \item \textit{ Charlene Yang, Rahulkumar Gayatri, Thorsten Kurth,..., Jack Deslippe}
+			 \enquote{An Empirical Roofline Methodology for Quantitatively Assessing Performance Portability} \\
+             P3HPC, 2018.
+%
 	   \item \textit{Tuomas Koskela, Zakhar Matveev, Rahulkumar Gayatri, et all}
 			 \enquote{A Novel Multi-Level Integrated Roofline Model Approach for Performance Characterization.} \\
-             Preliminarily accepted for publication at ISC2018, Frankfurt, Germany.
+             ISC2018, Frankfurt, Germany.
 %
 	   \item \textit{Rahulkumar Gayatri, Rosa M. Badia, Eduard Ayguade}
 			 \enquote{Loop level speculation in a task based programming model.} \\
@@ -158,22 +168,16 @@ phone-number\ :\ 19253848354
 \begin{enumerate}
 %
         \item { \bf Berkeley GW} -
-        A material science kernel, that predicts the excited state properties of a wide range of materials..
-        The aim is to port the kernel using different programming models such as OpenMP3.0, OpenMP4.5 (for GPU's using the target directives), Kokkos, RAJA and OpenCL.
+        Material science kernels, that predicts the excited state properties of a wide range of materials..
+        The aim is to port the kernel using different programming models such as OpenMP3.0, OpenMP4.5 (for GPU's using the target directives), Kokkos, RAJA and OpenACC.
         We compare the performance of the kernel ported using the above mentioned programming models to the best known implementations of the kernel for the specific architecture.
         The goal is to test the programmability, performance and portability of these frameworks.
-        We are currently running this kernel on machines such as Cori at LBNL (compsising of haswell and KNL processors) and summitdev at Oakridge National lab comprising of
-        4 Nvidia Pascal GPU's on a single node.
-        We have a fortran and a C++ version of the kernels to compare the performance between these programming languages.
-        We catalog the results obtained, lessons learnt and the experiences gained from this project so that the future users might benefit from them.
-        \url{http://performanceportability.org/case_studies/gw/}. It is an open source code which can be found here :
-        \url{https://github.com/rahulgayatri23/BGW-Kernels}
-%
+%%
     \item {\bf SW4} -
             Seismic wave code of 4th order.
-            It simulates the effects of an earthquake, \url{https://github.com/geodynamics/sw4}.
+            It simulates the effects of an earthquake.%, \url{https://github.com/geodynamics/sw4}.
             My role in the project is to optimize the code for the Knights Landing architecture from Intel.
-            For this I use techniques such as vectorization, cache-blocking, reducing OpenMP overhead.
+            For this I use techniques such as vectorization, cache-blocking, reducing the OpenMP overhead.
 %
 	   \item {\bf MOOSE } -
              The simulation environment uses various ODE system solvers to understand the chemical and electrical interactions inside a cell.
@@ -204,24 +208,29 @@ phone-number\ :\ 19253848354
 %
 \end{enumerate}
 %
+%
 \section{Professional Career}
 %
 \begin{itemize}
     \item * Postdoc at Lawrence Berkeley National Lab.  \\
+%
 	   \item Technical Specialist, High Performance Computing (HPC), Wipro Infotech \\
-			 August, 2015 - September 2016
+			 August, 2015 - September 2016 \\
+%
 	   \item Doctoral student at Barcelona Supercomputing Center - \\
-			 September, 2009 - March, 2015
 \end{itemize}
 %
-\section{Honors}
-Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+\section{Honors \&\& Highlights}
+\begin{itemize}
+    \item Led the Workshop and Tutorial at the 2018 Computational Science Graduate Fellowship (CSGF).
+    \item Received a Pre-Doctoral scholarship, FI AGAUR grant,  by Generalitat de Catalunya
+\end{itemize}
 
-%
-\section{References}
-To be provided on request.
+%\section{References}
+%To be provided on request.
+
 \end{resume}
-%
+
 \end{document}
 
 
